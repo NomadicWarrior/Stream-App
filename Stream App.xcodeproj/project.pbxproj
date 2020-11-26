@@ -12,6 +12,9 @@
 		5C41A1192570165A00BBCA8D /* StreamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C41A1182570165A00BBCA8D /* StreamVC.swift */; };
 		5C41A11E2570165D00BBCA8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C41A11D2570165D00BBCA8D /* Assets.xcassets */; };
 		5C41A1212570165D00BBCA8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C41A11F2570165D00BBCA8D /* LaunchScreen.storyboard */; };
+		5CD9934625702A2C00439022 /* StreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9934525702A2C00439022 /* StreamCell.swift */; };
+		5CD9934925702AB300439022 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9934825702AB300439022 /* UIViewController + Extension.swift */; };
+		5CD9934C25702B5500439022 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9934B25702B5500439022 /* SelfConfiguringCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		5C41A11D2570165D00BBCA8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C41A1202570165D00BBCA8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C41A1222570165D00BBCA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CD9934525702A2C00439022 /* StreamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamCell.swift; sourceTree = "<group>"; };
+		5CD9934825702AB300439022 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		5CD9934B25702B5500439022 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 				5C41A12B257016E300BBCA8D /* Model */,
 				5C41A12A257016CE00BBCA8D /* View */,
 				5C41A1292570169900BBCA8D /* ViewModel */,
+				5CD9934A25702B2F00439022 /* Protocol */,
 				5C41A11D2570165D00BBCA8D /* Assets.xcassets */,
 				5C41A11F2570165D00BBCA8D /* LaunchScreen.storyboard */,
 				5C41A1222570165D00BBCA8D /* Info.plist */,
@@ -86,6 +93,7 @@
 			children = (
 				5C41A1182570165A00BBCA8D /* StreamVC.swift */,
 				5C41A12C257017A600BBCA8D /* Cell */,
+				5CD9934725702A8D00439022 /* Extension */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -100,8 +108,25 @@
 		5C41A12C257017A600BBCA8D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				5CD9934525702A2C00439022 /* StreamCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5CD9934725702A8D00439022 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5CD9934825702AB300439022 /* UIViewController + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5CD9934A25702B2F00439022 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5CD9934B25702B5500439022 /* SelfConfiguringCell.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +200,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C41A1192570165A00BBCA8D /* StreamVC.swift in Sources */,
+				5CD9934925702AB300439022 /* UIViewController + Extension.swift in Sources */,
 				5C41A1152570165A00BBCA8D /* AppDelegate.swift in Sources */,
 				5C41A1172570165A00BBCA8D /* SceneDelegate.swift in Sources */,
+				5CD9934625702A2C00439022 /* StreamCell.swift in Sources */,
+				5CD9934C25702B5500439022 /* SelfConfiguringCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

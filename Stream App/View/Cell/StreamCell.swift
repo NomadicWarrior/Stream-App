@@ -8,17 +8,20 @@
 
 import UIKit
 
-class StreamCell: UITableViewCell {
-
+class StreamCell: UICollectionViewCell, SelfConfiguringCell {
+    static var reuseId: String = "streams"
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
+    func configure<U>(with value: U) where U : Hashable {
+        
+    }
 }

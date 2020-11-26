@@ -6,4 +6,10 @@
 //  Copyright © 2020 Nomadic. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController {
+    
+    //func controllerConfigure<T:
+}
+
