@@ -26,6 +26,12 @@ class StreamVC: UIViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<SectionKind, AnyHashable>
     private var dataSource: DataSource!
     
+    let streamData: [Stream] = [Stream(title: "Stream 1", urlLink: "1", image: "1"),
+    
+    Stream(title: "Stream 2", urlLink: "2", image: "2"),
+    Stream(title: "Stream 3", urlLink: "3", image: "3"),
+    Stream(title: "Stream 4", urlLink: "4", image: "4")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -71,11 +77,14 @@ extension StreamVC {
     private func createStreamLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
+         item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: -10, trailing: 20)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(200))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(220))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        //group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: -10, trailing: -20)
         
         let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .none
         section.interGroupSpacing = 20
         return section
     }
@@ -95,6 +104,14 @@ extension StreamVC {
                 return cell
             }
         })
+        
+        var snapshot = NSDiffableDataSourceSnapshot<SectionKind, AnyHashable>()
+        snapshot.appendSections([.streams])
+        
+        //let streams: [Stream] = Stream.streamData()
+        
+        snapshot.appendItems(streamData, toSection: .streams)
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
 }
 
@@ -102,6 +119,10 @@ extension StreamVC {
 //MARK - Collectionview Delegate
 extension StreamVC: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(streamData[indexPath.row].title)
+        // Start play stream video
+    }
 }
 
 //MARK - Content view

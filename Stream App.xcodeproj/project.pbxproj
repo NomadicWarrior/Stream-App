@@ -15,6 +15,9 @@
 		5CD9934625702A2C00439022 /* StreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9934525702A2C00439022 /* StreamCell.swift */; };
 		5CD9934925702AB300439022 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9934825702AB300439022 /* UIViewController + Extension.swift */; };
 		5CD9934C25702B5500439022 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9934B25702B5500439022 /* SelfConfiguringCell.swift */; };
+		5CD9934E257031B700439022 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9934D257031B700439022 /* Stream.swift */; };
+		5CD993522570345100439022 /* BrightonPier.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD993502570345100439022 /* BrightonPier.png */; };
+		5CD993532570345100439022 /* RoseBaySydney.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD993512570345100439022 /* RoseBaySydney.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		5CD9934525702A2C00439022 /* StreamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamCell.swift; sourceTree = "<group>"; };
 		5CD9934825702AB300439022 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		5CD9934B25702B5500439022 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
+		5CD9934D257031B700439022 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		5CD993502570345100439022 /* BrightonPier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrightonPier.png; sourceTree = "<group>"; };
+		5CD993512570345100439022 /* RoseBaySydney.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RoseBaySydney.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 				5C41A12A257016CE00BBCA8D /* View */,
 				5C41A1292570169900BBCA8D /* ViewModel */,
 				5CD9934A25702B2F00439022 /* Protocol */,
+				5CD9934F2570343000439022 /* Resources */,
 				5C41A11D2570165D00BBCA8D /* Assets.xcassets */,
 				5C41A11F2570165D00BBCA8D /* LaunchScreen.storyboard */,
 				5C41A1222570165D00BBCA8D /* Info.plist */,
@@ -101,6 +108,7 @@
 		5C41A12B257016E300BBCA8D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5CD9934D257031B700439022 /* Stream.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +135,15 @@
 				5CD9934B25702B5500439022 /* SelfConfiguringCell.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5CD9934F2570343000439022 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CD993502570345100439022 /* BrightonPier.png */,
+				5CD993512570345100439022 /* RoseBaySydney.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C41A1212570165D00BBCA8D /* LaunchScreen.storyboard in Resources */,
+				5CD993532570345100439022 /* RoseBaySydney.png in Resources */,
 				5C41A11E2570165D00BBCA8D /* Assets.xcassets in Resources */,
+				5CD993522570345100439022 /* BrightonPier.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +224,7 @@
 				5C41A1172570165A00BBCA8D /* SceneDelegate.swift in Sources */,
 				5CD9934625702A2C00439022 /* StreamCell.swift in Sources */,
 				5CD9934C25702B5500439022 /* SelfConfiguringCell.swift in Sources */,
+				5CD9934E257031B700439022 /* Stream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
