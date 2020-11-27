@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class StreamVC: UIViewController {
 
@@ -26,10 +28,10 @@ class StreamVC: UIViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<SectionKind, AnyHashable>
     private var dataSource: DataSource!
     
-    let streamData: [Stream] = [Stream(title: "Stream 1", urlLink: "1", image: "1"),
+    let streamData: [Stream] = [Stream(title: "Creature of Habit (2009), sci-fi horror trailer + teaser", urlLink: "https://archive.org/download/CreatureOfHabit2009Sci-fiHorrorTrailerTeaser/trailer4small2_512kb.mp4", image: "1"),
     
-    Stream(title: "Stream 2", urlLink: "2", image: "2"),
-    Stream(title: "Stream 3", urlLink: "3", image: "3"),
+    Stream(title: "Forbidden Planet trailer", urlLink: "https://archive.org/download/ForbiddenPlanetTrailer/FB_trailer.mp4", image: "2"),
+    Stream(title: "Alien - trailer", urlLink: "https://archive.org/download/Alien-Trailer/Trailer-Alien.mp4", image: "3"),
     Stream(title: "Stream 4", urlLink: "4", image: "4")]
     
     override func viewDidLoad() {
@@ -120,8 +122,13 @@ extension StreamVC {
 extension StreamVC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(streamData[indexPath.row].title)
         // Start play stream video
+        guard let url = URL(string: streamData[indexPath.row].urlLink) else { return }
+        
+        let player = AVPlayer(url: url)
+        let vc = AVPlayerViewController()
+        vc.player = player
+        present(vc, animated: true, completion: nil)
     }
 }
 

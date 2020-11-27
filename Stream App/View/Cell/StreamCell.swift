@@ -13,7 +13,7 @@ class StreamCell: UICollectionViewCell, SelfConfiguringCell {
     
     let titleLabel: UILabel = {
        let label = UILabel()
-        
+        label.numberOfLines = 0
         return label
     }()
     
@@ -30,9 +30,11 @@ class StreamCell: UICollectionViewCell, SelfConfiguringCell {
         layer.cornerRadius = 10
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
         ])
     }
     
